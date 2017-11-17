@@ -1,0 +1,75 @@
+﻿@model UIA.Models.Member
+
+@using (Html.BeginForm("MemberRegistration", "Member", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h2>Registration</h2>
+    <fieldset>
+        <br />
+        <div id="registermember"></div>
+
+        <img id="blah" src="#" alt="Profile Picture" />
+        <br />
+        <br />
+        <input type='file' name="photo" onchange="readURL(this);" />
+
+        <div class="editor-label">
+            <label>Name</label>
+        </div>
+        <div class="editor-field">
+            <input name="name" type="text" />
+        </div>
+
+        <div class="editor-label">
+            <label>Date of Birth</label>
+        </div>
+        <div class="editor-field">
+            <input name="dob" type="date" />
+        </div>
+
+        <div class="editor-label">
+            <label>Email</label>
+        </div>
+        <div class="editor-field">
+            <input name="email" type="email"/>
+        </div>
+
+        <div class="editor-label">
+            <label>Username</label>
+        </div>
+        <div class="editor-field">
+            <input name="username" type="text"/>
+        </div>
+
+        <div class="editor-label">
+            <label>Password</label>
+        </div>
+        <div class="editor-field">
+            <input name="password" type="password"/>
+        </div>
+        <br/>
+        <p>
+            <input type="submit" value="Register" />
+        </p>
+    </fieldset>
+} 
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+} 
+
+<script language="javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(250)
+                    .height(300);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="UIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Airport">
+          <Key>
+            <PropertyRef Name="airport_id" />
+          </Key>
+          <Property Name="airport_id" Type="int" Nullable="false" />
+          <Property Name="airport_name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="airport_city" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="airport_country" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bookings">
+          <Key>
+            <PropertyRef Name="booking_id" />
+          </Key>
+          <Property Name="booking_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="account_id" Type="int" Nullable="false" />
+          <Property Name="booking_datetime" Type="datetime" Nullable="false" />
+          <Property Name="total_fare" Type="smallmoney" Nullable="false" />
+          <Property Name="booking_status" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FareTariffs">
+          <Key>
+            <PropertyRef Name="flight_id" />
+            <PropertyRef Name="class_type" />
+          </Key>
+          <Property Name="flight_id" Type="int" Nullable="false" />
+          <Property Name="class_type" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="child_fare" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="adult_fare" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FlightRecords">
+          <Key>
+            <PropertyRef Name="flight_id" />
+          </Key>
+          <Property Name="flight_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="flight_no" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="departure_datetime" Type="datetime" Nullable="false" />
+          <Property Name="arrival_datetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Flights">
+          <Key>
+            <PropertyRef Name="flight_no" />
+          </Key>
+          <Property Name="flight_no" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="route_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="login_username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="image_url" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Routes">
+          <Key>
+            <PropertyRef Name="route_id" />
+          </Key>
+          <Property Name="route_id" Type="int" Nullable="false" />
+          <Property Name="origin_airport_id" Type="int" Nullable="false" />
+          <Property Name="dest_airport_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tickets">
+          <Key>
+            <PropertyRef Name="ticket_no" />
+          </Key>
+          <Property Name="ticket_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="booking_id" Type="int" Nullable="false" />
+          <Property Name="flight_id" Type="int" Nullable="false" />
+          <Property Name="passenger_lastname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passenger_firstname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passenger_passport" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passenger_dob" Type="date" Nullable="false" />
+          <Property Name="class_type" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ticket_status" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK__Bookings__accoun__59063A47">
+          <End Role="Member" Type="Self.Member" Multiplicity="1" />
+          <End Role="Bookings" Type="Self.Bookings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Bookings">
+              <PropertyRef Name="account_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FareTarif__fligh__59FA5E80">
+          <End Role="FlightRecords" Type="Self.FlightRecords" Multiplicity="1" />
+          <End Role="FareTariffs" Type="Self.FareTariffs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlightRecords">
+              <PropertyRef Name="flight_id" />
+            </Principal>
+            <Dependent Role="FareTariffs">
+              <PropertyRef Name="flight_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FlightRec__fligh__5AEE82B9">
+          <End Role="Flights" Type="Self.Flights" Multiplicity="1" />
+          <End Role="FlightRecords" Type="Self.FlightRecords" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flights">
+              <PropertyRef Name="flight_no" />
+            </Principal>
+            <Dependent Role="FlightRecords">
+              <PropertyRef Name="flight_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Flights__route_i__5BE2A6F2">
+          <End Role="Routes" Type="Self.Routes" Multiplicity="1" />
+          <End Role="Flights" Type="Self.Flights" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Routes">
+              <PropertyRef Name="route_id" />
+            </Principal>
+            <Dependent Role="Flights">
+              <PropertyRef Name="route_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Member__login_us__5CD6CB2B">
+          <End Role="Login" Type="Self.Login" Multiplicity="1" />
+          <End Role="Member" Type="Self.Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="username" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="login_username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Routes__dest_air__5EBF139D">
+          <End Role="Airport" Type="Self.Airport" Multiplicity="1" />
+          <End Role="Routes" Type="Self.Routes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Airport">
+              <PropertyRef Name="airport_id" />
+            </Principal>
+            <Dependent Role="Routes">
+              <PropertyRef Name="dest_airport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Routes__origin_a__5DCAEF64">
+          <End Role="Airport" Type="Self.Airport" Multiplicity="1" />
+          <End Role="Routes" Type="Self.Routes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Airport">
+              <PropertyRef Name="airport_id" />
+            </Principal>
+            <Dependent Role="Routes">
+              <PropertyRef Name="origin_airport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tickets__booking__5FB337D6">
+          <End Role="Bookings" Type="Self.Bookings" Multiplicity="1" />
+          <End Role="Tickets" Type="Self.Tickets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bookings">
+              <PropertyRef Name="booking_id" />
+            </Principal>
+            <Dependent Role="Tickets">
+              <PropertyRef Name="booking_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tickets__flight___60A75C0F">
+          <End Role="FlightRecords" Type="Self.FlightRecords" Multiplicity="1" />
+          <End Role="Tickets" Type="Self.Tickets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlightRecords">
+              <PropertyRef Name="flight_id" />
+            </Principal>
+            <Dependent Role="Tickets">
+              <PropertyRef Name="flight_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="UIAModelStoreContainer">
+          <EntitySet Name="Airport" EntityType="Self.Airport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bookings" EntityType="Self.Bookings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FareTariffs" EntityType="Self.FareTariffs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FlightRecords" EntityType="Self.FlightRecords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Flights" EntityType="Self.Flights" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Routes" EntityType="Self.Routes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tickets" EntityType="Self.Tickets" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Bookings__accoun__59063A47" Association="Self.FK__Bookings__accoun__59063A47">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Bookings" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FareTarif__fligh__59FA5E80" Association="Self.FK__FareTarif__fligh__59FA5E80">
+            <End Role="FlightRecords" EntitySet="FlightRecords" />
+            <End Role="FareTariffs" EntitySet="FareTariffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FlightRec__fligh__5AEE82B9" Association="Self.FK__FlightRec__fligh__5AEE82B9">
+            <End Role="Flights" EntitySet="Flights" />
+            <End Role="FlightRecords" EntitySet="FlightRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Flights__route_i__5BE2A6F2" Association="Self.FK__Flights__route_i__5BE2A6F2">
+            <End Role="Routes" EntitySet="Routes" />
+            <End Role="Flights" EntitySet="Flights" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Member__login_us__5CD6CB2B" Association="Self.FK__Member__login_us__5CD6CB2B">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Routes__dest_air__5EBF139D" Association="Self.FK__Routes__dest_air__5EBF139D">
+            <End Role="Airport" EntitySet="Airport" />
+            <End Role="Routes" EntitySet="Routes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Routes__origin_a__5DCAEF64" Association="Self.FK__Routes__origin_a__5DCAEF64">
+            <End Role="Airport" EntitySet="Airport" />
+            <End Role="Routes" EntitySet="Routes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tickets__booking__5FB337D6" Association="Self.FK__Tickets__booking__5FB337D6">
+            <End Role="Bookings" EntitySet="Bookings" />
+            <End Role="Tickets" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tickets__flight___60A75C0F" Association="Self.FK__Tickets__flight___60A75C0F">
+            <End Role="FlightRecords" EntitySet="FlightRecords" />
+            <End Role="Tickets" EntitySet="Tickets" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Airport">
+          <Key>
+            <PropertyRef Name="airport_id" />
+          </Key>
+          <Property Name="airport_id" Type="Int32" Nullable="false" />
+          <Property Name="airport_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="airport_city" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="airport_country" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Routes" Relationship="Self.FK__Routes__dest_air__5EBF139D" FromRole="Airport" ToRole="Routes" />
+          <NavigationProperty Name="Routes1" Relationship="Self.FK__Routes__origin_a__5DCAEF64" FromRole="Airport" ToRole="Routes" />
+        </EntityType>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="booking_id" />
+          </Key>
+          <Property Name="booking_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="account_id" Type="Int32" Nullable="false" />
+          <Property Name="booking_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="total_fare" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="booking_status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Member" Relationship="Self.FK__Bookings__accoun__59063A47" FromRole="Bookings" ToRole="Member" />
+          <NavigationProperty Name="Tickets" Relationship="Self.FK__Tickets__booking__5FB337D6" FromRole="Bookings" ToRole="Tickets" />
+        </EntityType>
+        <EntityType Name="FareTariff">
+          <Key>
+            <PropertyRef Name="flight_id" />
+            <PropertyRef Name="class_type" />
+          </Key>
+          <Property Name="flight_id" Type="Int32" Nullable="false" />
+          <Property Name="class_type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="child_fare" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adult_fare" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="FlightRecord" Relationship="Self.FK__FareTarif__fligh__59FA5E80" FromRole="FareTariffs" ToRole="FlightRecords" />
+        </EntityType>
+        <EntityType Name="FlightRecord">
+          <Key>
+            <PropertyRef Name="flight_id" />
+          </Key>
+          <Property Name="flight_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="flight_no" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="departure_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="arrival_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="FareTariffs" Relationship="Self.FK__FareTarif__fligh__59FA5E80" FromRole="FlightRecords" ToRole="FareTariffs" />
+          <NavigationProperty Name="Flight" Relationship="Self.FK__FlightRec__fligh__5AEE82B9" FromRole="FlightRecords" ToRole="Flights" />
+          <NavigationProperty Name="Tickets" Relationship="Self.FK__Tickets__flight___60A75C0F" FromRole="FlightRecords" ToRole="Tickets" />
+        </EntityType>
+        <EntityType Name="Flight">
+          <Key>
+            <PropertyRef Name="flight_no" />
+          </Key>
+          <Property Name="flight_no" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="route_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="FlightRecords" Relationship="Self.FK__FlightRec__fligh__5AEE82B9" FromRole="Flights" ToRole="FlightRecords" />
+          <NavigationProperty Name="Route" Relationship="Self.FK__Flights__route_i__5BE2A6F2" FromRole="Flights" ToRole="Routes" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Members" Relationship="Self.FK__Member__login_us__5CD6CB2B" FromRole="Login" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="login_username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Bookings" Relationship="Self.FK__Bookings__accoun__59063A47" FromRole="Member" ToRole="Bookings" />
+          <NavigationProperty Name="Login" Relationship="Self.FK__Member__login_us__5CD6CB2B" FromRole="Member" ToRole="Login" />
+        </EntityType>
+        <EntityType Name="Route">
+          <Key>
+            <PropertyRef Name="route_id" />
+          </Key>
+          <Property Name="route_id" Type="Int32" Nullable="false" />
+          <Property Name="origin_airport_id" Type="Int32" Nullable="false" />
+          <Property Name="dest_airport_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Airport" Relationship="Self.FK__Routes__dest_air__5EBF139D" FromRole="Routes" ToRole="Airport" />
+          <NavigationProperty Name="Airport1" Relationship="Self.FK__Routes__origin_a__5DCAEF64" FromRole="Routes" ToRole="Airport" />
+          <NavigationProperty Name="Flights" Relationship="Self.FK__Flights__route_i__5BE2A6F2" FromRole="Routes" ToRole="Flights" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="ticket_no" />
+          </Key>
+          <Property Name="ticket_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="booking_id" Type="Int32" Nullable="false" />
+          <Property Name="flight_id" Type="Int32" Nullable="false" />
+          <Property Name="passenger_lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passenger_firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passenger_passport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passenger_dob" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="class_type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ticket_status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Booking" Relationship="Self.FK__Tickets__booking__5FB337D6" FromRole="Tickets" ToRole="Bookings" />
+          <NavigationProperty Name="FlightRecord" Relationship="Self.FK__Tickets__flight___60A75C0F" FromRole="Tickets" ToRole="FlightRecords" />
+        </EntityType>
+        <Association Name="FK__Routes__dest_air__5EBF139D">
+          <End Role="Airport" Type="Self.Airport" Multiplicity="1" />
+          <End Role="Routes" Type="Self.Route" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Airport">
+              <PropertyRef Name="airport_id" />
+            </Principal>
+            <Dependent Role="Routes">
+              <PropertyRef Name="dest_airport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Routes__origin_a__5DCAEF64">
+          <End Role="Airport" Type="Self.Airport" Multiplicity="1" />
+          <End Role="Routes" Type="Self.Route" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Airport">
+              <PropertyRef Name="airport_id" />
+            </Principal>
+            <Dependent Role="Routes">
+              <PropertyRef Name="origin_airport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bookings__accoun__59063A47">
+          <End Role="Member" Type="Self.Member" Multiplicity="1" />
+          <End Role="Bookings" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Bookings">
+              <PropertyRef Name="account_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tickets__booking__5FB337D6">
+          <End Role="Bookings" Type="Self.Booking" Multiplicity="1" />
+          <End Role="Tickets" Type="Self.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bookings">
+              <PropertyRef Name="booking_id" />
+            </Principal>
+            <Dependent Role="Tickets">
+              <PropertyRef Name="booking_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FareTarif__fligh__59FA5E80">
+          <End Role="FlightRecords" Type="Self.FlightRecord" Multiplicity="1" />
+          <End Role="FareTariffs" Type="Self.FareTariff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlightRecords">
+              <PropertyRef Name="flight_id" />
+            </Principal>
+            <Dependent Role="FareTariffs">
+              <PropertyRef Name="flight_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FlightRec__fligh__5AEE82B9">
+          <End Role="Flights" Type="Self.Flight" Multiplicity="1" />
+          <End Role="FlightRecords" Type="Self.FlightRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flights">
+              <PropertyRef Name="flight_no" />
+            </Principal>
+            <Dependent Role="FlightRecords">
+              <PropertyRef Name="flight_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tickets__flight___60A75C0F">
+          <End Role="FlightRecords" Type="Self.FlightRecord" Multiplicity="1" />
+          <End Role="Tickets" Type="Self.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlightRecords">
+              <PropertyRef Name="flight_id" />
+            </Principal>
+            <Dependent Role="Tickets">
+              <PropertyRef Name="flight_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Flights__route_i__5BE2A6F2">
+          <End Role="Routes" Type="Self.Route" Multiplicity="1" />
+          <End Role="Flights" Type="Self.Flight" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Routes">
+              <PropertyRef Name="route_id" />
+            </Principal>
+            <Dependent Role="Flights">
+              <PropertyRef Name="route_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Member__login_us__5CD6CB2B">
+          <End Role="Login" Type="Self.Login" Multiplicity="1" />
+          <End Role="Member" Type="Self.Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="username" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="login_username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="UIAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Airports" EntityType="Self.Airport" />
+          <EntitySet Name="Bookings" EntityType="Self.Booking" />
+          <EntitySet Name="FareTariffs" EntityType="Self.FareTariff" />
+          <EntitySet Name="FlightRecords" EntityType="Self.FlightRecord" />
+          <EntitySet Name="Flights" EntityType="Self.Flight" />
+          <EntitySet Name="Logins" EntityType="Self.Login" />
+          <EntitySet Name="Members" EntityType="Self.Member" />
+          <EntitySet Name="Routes" EntityType="Self.Route" />
+          <EntitySet Name="Tickets" EntityType="Self.Ticket" />
+          <AssociationSet Name="FK__Routes__dest_air__5EBF139D" Association="Self.FK__Routes__dest_air__5EBF139D">
+            <End Role="Airport" EntitySet="Airports" />
+            <End Role="Routes" EntitySet="Routes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Routes__origin_a__5DCAEF64" Association="Self.FK__Routes__origin_a__5DCAEF64">
+            <End Role="Airport" EntitySet="Airports" />
+            <End Role="Routes" EntitySet="Routes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bookings__accoun__59063A47" Association="Self.FK__Bookings__accoun__59063A47">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="Bookings" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tickets__booking__5FB337D6" Association="Self.FK__Tickets__booking__5FB337D6">
+            <End Role="Bookings" EntitySet="Bookings" />
+            <End Role="Tickets" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FareTarif__fligh__59FA5E80" Association="Self.FK__FareTarif__fligh__59FA5E80">
+            <End Role="FlightRecords" EntitySet="FlightRecords" />
+            <End Role="FareTariffs" EntitySet="FareTariffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FlightRec__fligh__5AEE82B9" Association="Self.FK__FlightRec__fligh__5AEE82B9">
+            <End Role="Flights" EntitySet="Flights" />
+            <End Role="FlightRecords" EntitySet="FlightRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tickets__flight___60A75C0F" Association="Self.FK__Tickets__flight___60A75C0F">
+            <End Role="FlightRecords" EntitySet="FlightRecords" />
+            <End Role="Tickets" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Flights__route_i__5BE2A6F2" Association="Self.FK__Flights__route_i__5BE2A6F2">
+            <End Role="Routes" EntitySet="Routes" />
+            <End Role="Flights" EntitySet="Flights" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Member__login_us__5CD6CB2B" Association="Self.FK__Member__login_us__5CD6CB2B">
+            <End Role="Login" EntitySet="Logins" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UIAModelStoreContainer" CdmEntityContainer="UIAEntities">
+          <EntitySetMapping Name="Airports">
+            <EntityTypeMapping TypeName="UIAModel.Airport">
+              <MappingFragment StoreEntitySet="Airport">
+                <ScalarProperty Name="airport_id" ColumnName="airport_id" />
+                <ScalarProperty Name="airport_name" ColumnName="airport_name" />
+                <ScalarProperty Name="airport_city" ColumnName="airport_city" />
+                <ScalarProperty Name="airport_country" ColumnName="airport_country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bookings">
+            <EntityTypeMapping TypeName="UIAModel.Booking">
+              <MappingFragment StoreEntitySet="Bookings">
+                <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+                <ScalarProperty Name="account_id" ColumnName="account_id" />
+                <ScalarProperty Name="booking_datetime" ColumnName="booking_datetime" />
+                <ScalarProperty Name="total_fare" ColumnName="total_fare" />
+                <ScalarProperty Name="booking_status" ColumnName="booking_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FareTariffs">
+            <EntityTypeMapping TypeName="UIAModel.FareTariff">
+              <MappingFragment StoreEntitySet="FareTariffs">
+                <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+                <ScalarProperty Name="class_type" ColumnName="class_type" />
+                <ScalarProperty Name="child_fare" ColumnName="child_fare" />
+                <ScalarProperty Name="adult_fare" ColumnName="adult_fare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FlightRecords">
+            <EntityTypeMapping TypeName="UIAModel.FlightRecord">
+              <MappingFragment StoreEntitySet="FlightRecords">
+                <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+                <ScalarProperty Name="flight_no" ColumnName="flight_no" />
+                <ScalarProperty Name="departure_datetime" ColumnName="departure_datetime" />
+                <ScalarProperty Name="arrival_datetime" ColumnName="arrival_datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Flights">
+            <EntityTypeMapping TypeName="UIAModel.Flight">
+              <MappingFragment StoreEntitySet="Flights">
+                <ScalarProperty Name="flight_no" ColumnName="flight_no" />
+                <ScalarProperty Name="route_id" ColumnName="route_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="UIAModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="UIAModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="login_username" ColumnName="login_username" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="image_url" ColumnName="image_url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Routes">
+            <EntityTypeMapping TypeName="UIAModel.Route">
+              <MappingFragment StoreEntitySet="Routes">
+                <ScalarProperty Name="route_id" ColumnName="route_id" />
+                <ScalarProperty Name="origin_airport_id" ColumnName="origin_airport_id" />
+                <ScalarProperty Name="dest_airport_id" ColumnName="dest_airport_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tickets">
+            <EntityTypeMapping TypeName="UIAModel.Ticket">
+              <MappingFragment StoreEntitySet="Tickets">
+                <ScalarProperty Name="ticket_no" ColumnName="ticket_no" />
+                <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+                <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+                <ScalarProperty Name="passenger_lastname" ColumnName="passenger_lastname" />
+                <ScalarProperty Name="passenger_firstname" ColumnName="passenger_firstname" />
+                <ScalarProperty Name="passenger_passport" ColumnName="passenger_passport" />
+                <ScalarProperty Name="passenger_dob" ColumnName="passenger_dob" />
+                <ScalarProperty Name="class_type" ColumnName="class_type" />
+                <ScalarProperty Name="ticket_status" ColumnName="ticket_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

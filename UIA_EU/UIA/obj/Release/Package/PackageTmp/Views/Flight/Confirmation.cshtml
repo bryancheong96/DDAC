@@ -1,0 +1,195 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using UIA.Models;
+
+<h2>Confirmation</h2> <br />
+<h3>Depart Flight</h3>
+
+@using (Html.BeginForm("Confirmation", "Flight", FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <th>
+                Flight No
+            </th>
+            <th>
+                Origin - Destination
+            </th>
+            <th>
+                Depart Time
+            </th>
+            <th>
+                Arrival Time
+            </th>
+            <th>
+                Total Fare
+            </th>
+        </tr>
+        @{var test = ViewData["depart_flight1"] as UIADatabase.FlightRecord;
+            decimal fare = Convert.ToDecimal(ViewData["fare"]);}
+        <tr>
+            <td>
+                @test.flight_no
+                <input name="last_name_" type="hidden" value="@test.flight_no" readonly />
+            </td>
+            <td>
+                @test.Flight.Route.Airport.airport_name -
+                @test.Flight.Route.Airport1.airport_name
+                <input name="last_name_" type="hidden" value="@test.Flight.Route.Airport.airport_name" readonly />
+                <input name="last_name_" type="hidden" value="@test.Flight.Route.Airport1.airport_name" readonly />
+            </td>
+            <td>
+                @test.departure_datetime
+                <input name="last_name_" type="hidden" value="@test.departure_datetime" readonly />
+            </td>
+            <td>
+                @test.arrival_datetime
+                <input name="last_name_" type="hidden" value="@test.arrival_datetime" readonly />
+            </td>
+            <td>
+                RM @fare
+                <input name="fare" type="hidden" value="@fare" readonly />
+            </td>
+        </tr>
+    </table>
+
+            if (ViewData["return_flight1"] != null)
+            {
+                var return_flight = ViewData["return_flight1"] as UIADatabase.FlightRecord;
+                decimal fare2 = Convert.ToDecimal(ViewData["fare2"]);
+                if (return_flight != null)
+                {
+                    <h3>Return Flight</h3>
+                    <table class="table">
+                        <tr>
+                            <th>
+                                Flight No
+                            </th>
+                            <th>
+                                Origin - Destination
+                            </th>
+                            <th>
+                                Depart Time
+                            </th>
+                            <th>
+                                Arrival Time
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                @return_flight.flight_no
+                                <input name="last_name_" type="hidden" value="@return_flight.flight_no" readonly />
+                            </td>
+                            <td>
+                                @return_flight.Flight.Route.Airport.airport_name -
+                                @return_flight.Flight.Route.Airport1.airport_name
+                                <input name="last_name_" type="hidden" value="@return_flight.Flight.Route.Airport.airport_name" readonly />
+                                <input name="last_name_" type="hidden" value="@return_flight.Flight.Route.Airport1.airport_name" readonly />
+                            </td>
+                            <td>
+                                @return_flight.departure_datetime
+                                <input name="last_name_" type="hidden" value="@return_flight.departure_datetime" readonly />
+                            </td>
+                            <td>
+                                @return_flight.arrival_datetime
+                                <input name="last_name_" type="hidden" value="@return_flight.arrival_datetime" readonly />
+                            </td>
+                            <td>
+                                RM @fare2
+                                <input name="fare2" type="hidden" value="@fare2" readonly />
+                            </td>
+                        </tr>
+                    </table>
+}
+            }
+
+            <h3>Passenger Details</h3>
+            <table class="table">
+                <tr>
+                    <th>
+                        Passenger no.
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Passport
+                    </th>
+                    <th>
+                        Date of Birth
+                    </th>
+                </tr>
+                @{var count = Convert.ToInt32(ViewData["count"]);
+                    var child_count = Convert.ToInt32(ViewData["child_count"]);
+                    for (int i = 1; i <= count; i++)
+                    {
+                        var detail = TempData["detail" + i] as Passenger;
+                        <tr>
+                            <td>
+                                <label>Passenger @i</label>
+                            </td>
+                            <td>
+                                @detail.Last_Name
+                                <input name="last_name_@i" type="hidden" value="@detail.Last_Name" readonly />
+                            </td>
+                            <td>
+                                @detail.First_Name
+                                <input name="first_name_@i" type="hidden" value="@detail.First_Name" readonly />
+                            </td>
+                            <td>
+                                @detail.Passport
+                                <input name="passport_@i" type="hidden" value="@detail.Passport" readonly />
+                            </td>
+                            <td>
+                                @detail.DOB.ToString("MM/dd/yyyy")
+                                <input name="dob_@i" type="hidden" value="@detail.DOB.ToString("MM/dd/yyyy")" readonly />
+                            </td>
+                        </tr>
+}
+                    if (child_count != 0)
+                    {
+                        for (int i = 1; i <= child_count; i++)
+                        {
+                            var detail = TempData["child_detail" + i] as Passenger;
+                            <tr>
+                                <td>
+                                    <label>Child @i</label>
+                                </td>
+                                <td>
+                                    @detail.Last_Name
+                                    <input name="child_last_name_@i" type="hidden" value="@detail.Last_Name" readonly />
+                                </td>
+                                <td>
+                                    @detail.First_Name
+                                    <input name="child_first_name_@i" type="hidden" value="@detail.First_Name" readonly />
+                                </td>
+                                <td>
+                                    @detail.Passport
+                                    <input name="child_passport_@i" type="hidden" value="@detail.Passport" readonly />
+                                </td>
+                                <td>
+                                    @detail.DOB.ToString("MM/dd/yyyy")
+                                    <input name="child_dob_@i" type="hidden" value="@detail.DOB.ToString("MM/dd/yyyy")" readonly />
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            </table>
+
+            <br />
+            if (ViewData["return_flight1"] != null)
+            {
+                var return_flight = ViewData["return_flight1"] as UIADatabase.FlightRecord;
+                <input name="flight2_id" type="text" value="@return_flight.flight_id" hidden/>    }
+                    string type = ViewData["type"].ToString();
+                    <input name="type" type="text" value="@type" hidden/>
+                    <input name="count" type="text" value="@count" hidden/>
+                    <input name="child_count" type="text" value="@child_count" hidden/>
+                    <input name="flight1_id" type="text" value="@test.flight_id" hidden/>
+                    <input type="submit" value="Confirm" />
+}

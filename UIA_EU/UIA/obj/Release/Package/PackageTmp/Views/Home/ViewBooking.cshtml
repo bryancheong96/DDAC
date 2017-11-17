@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using UIADatabase
+
+<br />
+<h2>Booking List</h2>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            Booking ID
+        </th>
+        <th>
+            Booking Status
+        </th>
+        <th>
+            Depart - Arrival
+        </th>
+        <th>
+            Depart Time
+        </th>
+        <th>
+            Origin Time
+        </th>
+    </tr>
+    @{  UIAEntities database = new UIAEntities();
+        var member = (UIADatabase.Member)Session["MemberInfo"];
+        int member_id = member.id;
+        var booking = from a in database.Bookings
+                      where a.account_id == member_id
+                      select a;
+        foreach (var item in booking)
+        {
+            using (Html.BeginForm("ViewBooking", "Flight", FormMethod.Post))
+            {
+                var ticket = from t in database.Tickets
+                             join b in database.Bookings on t.booking_id equals b.booking_id
+                             join fr in database.FlightRecords on t.flight_id equals fr.flight_id
+                             join f in database.Flights on fr.flight_no equals f.flight_no
+                             join r in database.Routes on f.route_id equals r.route_id
+                             where b.booking_id == item.booking_id
+                             select r;
+            <tr>
+                <td>
+                    @item.booking_id
+                </td>
+                <td>
+                    @item.booking_status
+                </td>
+                @foreach (var t in ticket)
+                {
+                    <td>
+                        @t.Airport.airport_name ~ @t.Airport1.airport_name
+                    </td>
+                    var time = from ti in database.Tickets
+                               join b in database.Bookings on ti.booking_id equals b.booking_id
+                               join fr in database.FlightRecords on ti.flight_id equals fr.flight_id
+                               where b.booking_id == item.booking_id
+                               select fr;
+                    foreach (var d in time)
+                    {
+                        <td>
+                            @d.flight_no
+                        </td>
+                        <td>
+                            @d.departure_datetime
+                        </td>
+                        <td>
+                            @d.arrival_datetime
+                        </td>
+                        break;
+                    }
+                    break;
+                }
+            </tr>
+            }
+        }
+    }
+</table>

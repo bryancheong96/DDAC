@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model UIA.Models.Login
+
+
+@using (Ajax.BeginForm("MemberLogin", "Member",new AjaxOptions { UpdateTargetId = "loginmember" }))
+{
+    <h2>Login</h2>
+    <fieldset>
+        <div id="loginmember"></div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Username)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Username)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password)
+        </div>
+
+        <p>
+            <input type="submit" value="Login" />
+        </p>
+        <a href="@Url.Action("Register", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)">
+            <span>Register Account</span>
+        </a>
+    </fieldset>
+}
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+    </script>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+ 
+

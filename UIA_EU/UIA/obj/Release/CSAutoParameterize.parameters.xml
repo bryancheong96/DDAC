@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="UIAEntities-Web.config Connection String" description="UIAEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/UIADataAccess.csdl|res://*/UIADataAccess.ssdl|res://*/UIADataAccess.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=uiaap.database.windows.net;initial catalog=UIA;user id=uia123;password=Pa$$w0rd;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\UIA_EU\\UIA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='UIAEntities']/@connectionString" />
+  </parameter>
+  <parameter name="UIAContext-Web.config Connection String" description="UIAContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=UIAContext-20171029002906; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|UIAContext-20171029002906.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\UIA_EU\\UIA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='UIAContext']/@connectionString" />
+  </parameter>
+</parameters>

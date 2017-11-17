@@ -1,0 +1,523 @@
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\ApplicationInsights.config
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\csc.exe
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\csc.exe.config
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\csc.rsp
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\csi.exe
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\csi.rsp
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\System.AppContext.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\vbc.exe
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\vbc.exe.config
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\vbc.rsp
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\VBCSCompiler.exe
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\UIA.dll.config
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\UIA.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\UIA.pdb
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Antlr3.Runtime.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\EntityFramework.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\EntityFramework.SqlServer.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.Web.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Newtonsoft.Json.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Helpers.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Mvc.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Optimization.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Razor.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.WebPages.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.WebPages.Razor.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\UIADatabase.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\WebGrease.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\UIADatabase.pdb
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\UIADatabase.dll.config
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\EntityFramework.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\EntityFramework.SqlServer.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Helpers.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Mvc.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Optimization.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.Razor.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.WebPages.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\System.Web.WebPages.Razor.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Antlr3.Runtime.pdb
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Newtonsoft.Json.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\bin\Microsoft.AI.Web.xml
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\obj\Debug\UIA.csprojResolveAssemblyReference.cache
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\obj\Debug\UIA.dll
+C:\Users\Bryan Cheong\Documents\Visual Studio 2017\Projects\UIA\UIA\obj\Debug\UIA.pdb
+D:\UIA\UIA\bin\ApplicationInsights.config
+D:\UIA\UIA\bin\roslyn\csc.exe
+D:\UIA\UIA\bin\roslyn\csc.exe.config
+D:\UIA\UIA\bin\roslyn\csc.rsp
+D:\UIA\UIA\bin\roslyn\csi.exe
+D:\UIA\UIA\bin\roslyn\csi.rsp
+D:\UIA\UIA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UIA\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\UIA\UIA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UIA\UIA\bin\roslyn\System.AppContext.dll
+D:\UIA\UIA\bin\roslyn\System.Collections.Immutable.dll
+D:\UIA\UIA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\UIA\UIA\bin\roslyn\System.IO.FileSystem.dll
+D:\UIA\UIA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\UIA\UIA\bin\roslyn\System.Reflection.Metadata.dll
+D:\UIA\UIA\bin\roslyn\vbc.exe
+D:\UIA\UIA\bin\roslyn\vbc.exe.config
+D:\UIA\UIA\bin\roslyn\vbc.rsp
+D:\UIA\UIA\bin\roslyn\VBCSCompiler.exe
+D:\UIA\UIA\bin\roslyn\VBCSCompiler.exe.config
+D:\UIA\UIA\bin\UIA.dll.config
+D:\UIA\UIA\bin\UIA.dll
+D:\UIA\UIA\bin\UIA.pdb
+D:\UIA\UIA\bin\Antlr3.Runtime.dll
+D:\UIA\UIA\bin\EntityFramework.dll
+D:\UIA\UIA\bin\EntityFramework.SqlServer.dll
+D:\UIA\UIA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\UIA\UIA\bin\Microsoft.AI.DependencyCollector.dll
+D:\UIA\UIA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\UIA\UIA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\UIA\UIA\bin\Microsoft.AI.Web.dll
+D:\UIA\UIA\bin\Microsoft.AI.WindowsServer.dll
+D:\UIA\UIA\bin\Microsoft.ApplicationInsights.dll
+D:\UIA\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UIA\UIA\bin\Microsoft.Web.Infrastructure.dll
+D:\UIA\UIA\bin\Newtonsoft.Json.dll
+D:\UIA\UIA\bin\System.Web.Helpers.dll
+D:\UIA\UIA\bin\System.Web.Mvc.dll
+D:\UIA\UIA\bin\System.Web.Optimization.dll
+D:\UIA\UIA\bin\System.Web.Razor.dll
+D:\UIA\UIA\bin\System.Web.WebPages.Deployment.dll
+D:\UIA\UIA\bin\System.Web.WebPages.dll
+D:\UIA\UIA\bin\System.Web.WebPages.Razor.dll
+D:\UIA\UIA\bin\UIADatabase.dll
+D:\UIA\UIA\bin\WebGrease.dll
+D:\UIA\UIA\bin\UIADatabase.pdb
+D:\UIA\UIA\bin\UIADatabase.dll.config
+D:\UIA\UIA\bin\EntityFramework.xml
+D:\UIA\UIA\bin\EntityFramework.SqlServer.xml
+D:\UIA\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UIA\UIA\bin\System.Web.Helpers.xml
+D:\UIA\UIA\bin\System.Web.Mvc.xml
+D:\UIA\UIA\bin\System.Web.Optimization.xml
+D:\UIA\UIA\bin\System.Web.Razor.xml
+D:\UIA\UIA\bin\System.Web.WebPages.xml
+D:\UIA\UIA\bin\System.Web.WebPages.Deployment.xml
+D:\UIA\UIA\bin\System.Web.WebPages.Razor.xml
+D:\UIA\UIA\bin\Antlr3.Runtime.pdb
+D:\UIA\UIA\bin\Newtonsoft.Json.xml
+D:\UIA\UIA\bin\Microsoft.ApplicationInsights.xml
+D:\UIA\UIA\bin\Microsoft.AI.DependencyCollector.xml
+D:\UIA\UIA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\UIA\UIA\bin\Microsoft.AI.WindowsServer.xml
+D:\UIA\UIA\bin\Microsoft.AI.Web.xml
+D:\UIA\UIA\obj\Debug\UIA.csprojResolveAssemblyReference.cache
+D:\UIA\UIA\obj\Debug\UIA.dll
+D:\UIA\UIA\obj\Debug\UIA.pdb
+D:\UIA_Asia\UIA\bin\ApplicationInsights.config
+D:\UIA_Asia\UIA\bin\roslyn\csc.exe
+D:\UIA_Asia\UIA\bin\roslyn\csc.exe.config
+D:\UIA_Asia\UIA\bin\roslyn\csc.rsp
+D:\UIA_Asia\UIA\bin\roslyn\csi.exe
+D:\UIA_Asia\UIA\bin\roslyn\csi.rsp
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\UIA_Asia\UIA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UIA_Asia\UIA\bin\roslyn\System.AppContext.dll
+D:\UIA_Asia\UIA\bin\roslyn\System.Collections.Immutable.dll
+D:\UIA_Asia\UIA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\UIA_Asia\UIA\bin\roslyn\System.IO.FileSystem.dll
+D:\UIA_Asia\UIA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\UIA_Asia\UIA\bin\roslyn\System.Reflection.Metadata.dll
+D:\UIA_Asia\UIA\bin\roslyn\vbc.exe
+D:\UIA_Asia\UIA\bin\roslyn\vbc.exe.config
+D:\UIA_Asia\UIA\bin\roslyn\vbc.rsp
+D:\UIA_Asia\UIA\bin\roslyn\VBCSCompiler.exe
+D:\UIA_Asia\UIA\bin\roslyn\VBCSCompiler.exe.config
+D:\UIA_Asia\UIA\bin\UIA.dll.config
+D:\UIA_Asia\UIA\bin\UIA.dll
+D:\UIA_Asia\UIA\bin\UIA.pdb
+D:\UIA_Asia\UIA\bin\Antlr3.Runtime.dll
+D:\UIA_Asia\UIA\bin\EntityFramework.dll
+D:\UIA_Asia\UIA\bin\EntityFramework.SqlServer.dll
+D:\UIA_Asia\UIA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\UIA_Asia\UIA\bin\Microsoft.AI.DependencyCollector.dll
+D:\UIA_Asia\UIA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\UIA_Asia\UIA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\UIA_Asia\UIA\bin\Microsoft.AI.Web.dll
+D:\UIA_Asia\UIA\bin\Microsoft.AI.WindowsServer.dll
+D:\UIA_Asia\UIA\bin\Microsoft.ApplicationInsights.dll
+D:\UIA_Asia\UIA\bin\Microsoft.Azure.KeyVault.Core.dll
+D:\UIA_Asia\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UIA_Asia\UIA\bin\Microsoft.Data.Edm.dll
+D:\UIA_Asia\UIA\bin\Microsoft.Data.OData.dll
+D:\UIA_Asia\UIA\bin\Microsoft.Data.Services.Client.dll
+D:\UIA_Asia\UIA\bin\Microsoft.Web.Infrastructure.dll
+D:\UIA_Asia\UIA\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\UIA_Asia\UIA\bin\Microsoft.WindowsAzure.Storage.dll
+D:\UIA_Asia\UIA\bin\Newtonsoft.Json.dll
+D:\UIA_Asia\UIA\bin\System.Spatial.dll
+D:\UIA_Asia\UIA\bin\System.Web.Helpers.dll
+D:\UIA_Asia\UIA\bin\System.Web.Mvc.dll
+D:\UIA_Asia\UIA\bin\System.Web.Optimization.dll
+D:\UIA_Asia\UIA\bin\System.Web.Razor.dll
+D:\UIA_Asia\UIA\bin\System.Web.WebPages.Deployment.dll
+D:\UIA_Asia\UIA\bin\System.Web.WebPages.dll
+D:\UIA_Asia\UIA\bin\System.Web.WebPages.Razor.dll
+D:\UIA_Asia\UIA\bin\UIADatabase.dll
+D:\UIA_Asia\UIA\bin\WebGrease.dll
+D:\UIA_Asia\UIA\bin\UIADatabase.pdb
+D:\UIA_Asia\UIA\bin\UIADatabase.dll.config
+D:\UIA_Asia\UIA\bin\EntityFramework.xml
+D:\UIA_Asia\UIA\bin\EntityFramework.SqlServer.xml
+D:\UIA_Asia\UIA\bin\Microsoft.Azure.KeyVault.Core.xml
+D:\UIA_Asia\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UIA_Asia\UIA\bin\Microsoft.Data.Edm.xml
+D:\UIA_Asia\UIA\bin\Microsoft.Data.OData.xml
+D:\UIA_Asia\UIA\bin\Microsoft.Data.Services.Client.xml
+D:\UIA_Asia\UIA\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\UIA_Asia\UIA\bin\Microsoft.WindowsAzure.Storage.pdb
+D:\UIA_Asia\UIA\bin\Microsoft.WindowsAzure.Storage.xml
+D:\UIA_Asia\UIA\bin\Newtonsoft.Json.xml
+D:\UIA_Asia\UIA\bin\System.Spatial.xml
+D:\UIA_Asia\UIA\bin\System.Web.Helpers.xml
+D:\UIA_Asia\UIA\bin\System.Web.Mvc.xml
+D:\UIA_Asia\UIA\bin\System.Web.Optimization.xml
+D:\UIA_Asia\UIA\bin\System.Web.Razor.xml
+D:\UIA_Asia\UIA\bin\System.Web.WebPages.xml
+D:\UIA_Asia\UIA\bin\System.Web.WebPages.Deployment.xml
+D:\UIA_Asia\UIA\bin\System.Web.WebPages.Razor.xml
+D:\UIA_Asia\UIA\bin\Antlr3.Runtime.pdb
+D:\UIA_Asia\UIA\bin\Microsoft.ApplicationInsights.xml
+D:\UIA_Asia\UIA\bin\Microsoft.AI.DependencyCollector.xml
+D:\UIA_Asia\UIA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\UIA_Asia\UIA\bin\Microsoft.AI.WindowsServer.xml
+D:\UIA_Asia\UIA\bin\Microsoft.AI.Web.xml
+D:\UIA_Asia\UIA\bin\de\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\es\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\it\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia\UIA\bin\de\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\es\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\fr\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\it\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\ja\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\ko\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\ru\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia\UIA\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia\UIA\bin\de\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\es\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\fr\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\it\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\ja\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\ko\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\ru\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hans\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\bin\zh-Hant\System.Spatial.resources.dll
+D:\UIA_Asia\UIA\obj\Debug\UIA.csprojResolveAssemblyReference.cache
+D:\UIA_Asia\UIA\obj\Debug\UIA.dll
+D:\UIA_Asia\UIA\obj\Debug\UIA.pdb
+D:\UIA_Asia - Copy\UIA\bin\ApplicationInsights.config
+D:\UIA_Asia - Copy\UIA\bin\roslyn\csc.exe
+D:\UIA_Asia - Copy\UIA\bin\roslyn\csc.exe.config
+D:\UIA_Asia - Copy\UIA\bin\roslyn\csc.rsp
+D:\UIA_Asia - Copy\UIA\bin\roslyn\csi.exe
+D:\UIA_Asia - Copy\UIA\bin\roslyn\csi.rsp
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UIA_Asia - Copy\UIA\bin\roslyn\System.AppContext.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\System.Collections.Immutable.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\System.IO.FileSystem.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\System.Reflection.Metadata.dll
+D:\UIA_Asia - Copy\UIA\bin\roslyn\vbc.exe
+D:\UIA_Asia - Copy\UIA\bin\roslyn\vbc.exe.config
+D:\UIA_Asia - Copy\UIA\bin\roslyn\vbc.rsp
+D:\UIA_Asia - Copy\UIA\bin\roslyn\VBCSCompiler.exe
+D:\UIA_Asia - Copy\UIA\bin\roslyn\VBCSCompiler.exe.config
+D:\UIA_Asia - Copy\UIA\bin\UIA.dll.config
+D:\UIA_Asia - Copy\UIA\bin\UIA.dll
+D:\UIA_Asia - Copy\UIA\bin\UIA.pdb
+D:\UIA_Asia - Copy\UIA\bin\Antlr3.Runtime.dll
+D:\UIA_Asia - Copy\UIA\bin\EntityFramework.dll
+D:\UIA_Asia - Copy\UIA\bin\EntityFramework.SqlServer.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.DependencyCollector.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.Web.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.WindowsServer.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.ApplicationInsights.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Azure.KeyVault.Core.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Data.Edm.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Data.OData.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Data.Services.Client.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Web.Infrastructure.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.WindowsAzure.Storage.dll
+D:\UIA_Asia - Copy\UIA\bin\Newtonsoft.Json.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Spatial.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Helpers.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Mvc.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Optimization.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Razor.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Web.WebPages.Deployment.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Web.WebPages.dll
+D:\UIA_Asia - Copy\UIA\bin\System.Web.WebPages.Razor.dll
+D:\UIA_Asia - Copy\UIA\bin\UIADatabase.dll
+D:\UIA_Asia - Copy\UIA\bin\WebGrease.dll
+D:\UIA_Asia - Copy\UIA\bin\UIADatabase.pdb
+D:\UIA_Asia - Copy\UIA\bin\UIADatabase.dll.config
+D:\UIA_Asia - Copy\UIA\bin\EntityFramework.xml
+D:\UIA_Asia - Copy\UIA\bin\EntityFramework.SqlServer.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Azure.KeyVault.Core.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Data.Edm.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Data.OData.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.Data.Services.Client.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.WindowsAzure.Storage.pdb
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.WindowsAzure.Storage.xml
+D:\UIA_Asia - Copy\UIA\bin\Newtonsoft.Json.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Spatial.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Helpers.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Mvc.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Optimization.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Web.Razor.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Web.WebPages.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Web.WebPages.Deployment.xml
+D:\UIA_Asia - Copy\UIA\bin\System.Web.WebPages.Razor.xml
+D:\UIA_Asia - Copy\UIA\bin\Antlr3.Runtime.pdb
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.ApplicationInsights.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.DependencyCollector.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.WindowsServer.xml
+D:\UIA_Asia - Copy\UIA\bin\Microsoft.AI.Web.xml
+D:\UIA_Asia - Copy\UIA\bin\de\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\es\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\it\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\de\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\es\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\fr\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\it\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ja\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ko\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ru\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\de\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\es\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\fr\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\it\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ja\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ko\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\ru\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hans\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\bin\zh-Hant\System.Spatial.resources.dll
+D:\UIA_Asia - Copy\UIA\obj\Debug\UIA.csprojResolveAssemblyReference.cache
+D:\UIA_Asia - Copy\UIA\obj\Debug\UIA.dll
+D:\UIA_Asia - Copy\UIA\obj\Debug\UIA.pdb
+D:\UIA_EU\UIA\bin\ApplicationInsights.config
+D:\UIA_EU\UIA\bin\roslyn\csc.exe
+D:\UIA_EU\UIA\bin\roslyn\csc.exe.config
+D:\UIA_EU\UIA\bin\roslyn\csc.rsp
+D:\UIA_EU\UIA\bin\roslyn\csi.exe
+D:\UIA_EU\UIA\bin\roslyn\csi.rsp
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\UIA_EU\UIA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UIA_EU\UIA\bin\roslyn\System.AppContext.dll
+D:\UIA_EU\UIA\bin\roslyn\System.Collections.Immutable.dll
+D:\UIA_EU\UIA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\UIA_EU\UIA\bin\roslyn\System.IO.FileSystem.dll
+D:\UIA_EU\UIA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\UIA_EU\UIA\bin\roslyn\System.Reflection.Metadata.dll
+D:\UIA_EU\UIA\bin\roslyn\vbc.exe
+D:\UIA_EU\UIA\bin\roslyn\vbc.exe.config
+D:\UIA_EU\UIA\bin\roslyn\vbc.rsp
+D:\UIA_EU\UIA\bin\roslyn\VBCSCompiler.exe
+D:\UIA_EU\UIA\bin\roslyn\VBCSCompiler.exe.config
+D:\UIA_EU\UIA\bin\UIA.dll.config
+D:\UIA_EU\UIA\bin\UIA.dll
+D:\UIA_EU\UIA\bin\UIA.pdb
+D:\UIA_EU\UIA\bin\Antlr3.Runtime.dll
+D:\UIA_EU\UIA\bin\EntityFramework.dll
+D:\UIA_EU\UIA\bin\EntityFramework.SqlServer.dll
+D:\UIA_EU\UIA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\UIA_EU\UIA\bin\Microsoft.AI.DependencyCollector.dll
+D:\UIA_EU\UIA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\UIA_EU\UIA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\UIA_EU\UIA\bin\Microsoft.AI.Web.dll
+D:\UIA_EU\UIA\bin\Microsoft.AI.WindowsServer.dll
+D:\UIA_EU\UIA\bin\Microsoft.ApplicationInsights.dll
+D:\UIA_EU\UIA\bin\Microsoft.Azure.KeyVault.Core.dll
+D:\UIA_EU\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UIA_EU\UIA\bin\Microsoft.Data.Edm.dll
+D:\UIA_EU\UIA\bin\Microsoft.Data.OData.dll
+D:\UIA_EU\UIA\bin\Microsoft.Data.Services.Client.dll
+D:\UIA_EU\UIA\bin\Microsoft.Web.Infrastructure.dll
+D:\UIA_EU\UIA\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\UIA_EU\UIA\bin\Microsoft.WindowsAzure.Storage.dll
+D:\UIA_EU\UIA\bin\Newtonsoft.Json.dll
+D:\UIA_EU\UIA\bin\System.Spatial.dll
+D:\UIA_EU\UIA\bin\System.Web.Helpers.dll
+D:\UIA_EU\UIA\bin\System.Web.Mvc.dll
+D:\UIA_EU\UIA\bin\System.Web.Optimization.dll
+D:\UIA_EU\UIA\bin\System.Web.Razor.dll
+D:\UIA_EU\UIA\bin\System.Web.WebPages.Deployment.dll
+D:\UIA_EU\UIA\bin\System.Web.WebPages.dll
+D:\UIA_EU\UIA\bin\System.Web.WebPages.Razor.dll
+D:\UIA_EU\UIA\bin\UIADatabase.dll
+D:\UIA_EU\UIA\bin\WebGrease.dll
+D:\UIA_EU\UIA\bin\UIADatabase.pdb
+D:\UIA_EU\UIA\bin\UIADatabase.dll.config
+D:\UIA_EU\UIA\bin\EntityFramework.xml
+D:\UIA_EU\UIA\bin\EntityFramework.SqlServer.xml
+D:\UIA_EU\UIA\bin\Microsoft.Azure.KeyVault.Core.xml
+D:\UIA_EU\UIA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UIA_EU\UIA\bin\Microsoft.Data.Edm.xml
+D:\UIA_EU\UIA\bin\Microsoft.Data.OData.xml
+D:\UIA_EU\UIA\bin\Microsoft.Data.Services.Client.xml
+D:\UIA_EU\UIA\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\UIA_EU\UIA\bin\Microsoft.WindowsAzure.Storage.pdb
+D:\UIA_EU\UIA\bin\Microsoft.WindowsAzure.Storage.xml
+D:\UIA_EU\UIA\bin\Newtonsoft.Json.xml
+D:\UIA_EU\UIA\bin\System.Spatial.xml
+D:\UIA_EU\UIA\bin\System.Web.Helpers.xml
+D:\UIA_EU\UIA\bin\System.Web.Mvc.xml
+D:\UIA_EU\UIA\bin\System.Web.Optimization.xml
+D:\UIA_EU\UIA\bin\System.Web.Razor.xml
+D:\UIA_EU\UIA\bin\System.Web.WebPages.xml
+D:\UIA_EU\UIA\bin\System.Web.WebPages.Deployment.xml
+D:\UIA_EU\UIA\bin\System.Web.WebPages.Razor.xml
+D:\UIA_EU\UIA\bin\Antlr3.Runtime.pdb
+D:\UIA_EU\UIA\bin\Microsoft.ApplicationInsights.xml
+D:\UIA_EU\UIA\bin\Microsoft.AI.DependencyCollector.xml
+D:\UIA_EU\UIA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\UIA_EU\UIA\bin\Microsoft.AI.WindowsServer.xml
+D:\UIA_EU\UIA\bin\Microsoft.AI.Web.xml
+D:\UIA_EU\UIA\bin\de\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\es\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\it\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\UIA_EU\UIA\bin\de\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\es\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\fr\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\it\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\ja\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\ko\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\ru\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\UIA_EU\UIA\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\UIA_EU\UIA\bin\de\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\es\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\fr\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\it\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\ja\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\ko\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\ru\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hans\System.Spatial.resources.dll
+D:\UIA_EU\UIA\bin\zh-Hant\System.Spatial.resources.dll
+D:\UIA_EU\UIA\obj\Debug\UIA.csprojResolveAssemblyReference.cache
+D:\UIA_EU\UIA\obj\Debug\UIA.dll
+D:\UIA_EU\UIA\obj\Debug\UIA.pdb

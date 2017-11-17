@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UIAModelStoreContainer" CdmEntityContainer="UIAEntities">
+    <EntitySetMapping Name="Airports">
+      <EntityTypeMapping TypeName="UIAModel.Airport">
+        <MappingFragment StoreEntitySet="Airport">
+          <ScalarProperty Name="airport_id" ColumnName="airport_id" />
+          <ScalarProperty Name="airport_name" ColumnName="airport_name" />
+          <ScalarProperty Name="airport_city" ColumnName="airport_city" />
+          <ScalarProperty Name="airport_country" ColumnName="airport_country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="UIAModel.Booking">
+        <MappingFragment StoreEntitySet="Bookings">
+          <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="booking_datetime" ColumnName="booking_datetime" />
+          <ScalarProperty Name="total_fare" ColumnName="total_fare" />
+          <ScalarProperty Name="booking_status" ColumnName="booking_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FareTariffs">
+      <EntityTypeMapping TypeName="UIAModel.FareTariff">
+        <MappingFragment StoreEntitySet="FareTariffs">
+          <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+          <ScalarProperty Name="class_type" ColumnName="class_type" />
+          <ScalarProperty Name="child_fare" ColumnName="child_fare" />
+          <ScalarProperty Name="adult_fare" ColumnName="adult_fare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlightRecords">
+      <EntityTypeMapping TypeName="UIAModel.FlightRecord">
+        <MappingFragment StoreEntitySet="FlightRecords">
+          <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+          <ScalarProperty Name="flight_no" ColumnName="flight_no" />
+          <ScalarProperty Name="departure_datetime" ColumnName="departure_datetime" />
+          <ScalarProperty Name="arrival_datetime" ColumnName="arrival_datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flights">
+      <EntityTypeMapping TypeName="UIAModel.Flight">
+        <MappingFragment StoreEntitySet="Flights">
+          <ScalarProperty Name="flight_no" ColumnName="flight_no" />
+          <ScalarProperty Name="route_id" ColumnName="route_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="UIAModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="UIAModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="login_username" ColumnName="login_username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="image_url" ColumnName="image_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Routes">
+      <EntityTypeMapping TypeName="UIAModel.Route">
+        <MappingFragment StoreEntitySet="Routes">
+          <ScalarProperty Name="route_id" ColumnName="route_id" />
+          <ScalarProperty Name="origin_airport_id" ColumnName="origin_airport_id" />
+          <ScalarProperty Name="dest_airport_id" ColumnName="dest_airport_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="UIAModel.Ticket">
+        <MappingFragment StoreEntitySet="Tickets">
+          <ScalarProperty Name="ticket_no" ColumnName="ticket_no" />
+          <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+          <ScalarProperty Name="flight_id" ColumnName="flight_id" />
+          <ScalarProperty Name="passenger_lastname" ColumnName="passenger_lastname" />
+          <ScalarProperty Name="passenger_firstname" ColumnName="passenger_firstname" />
+          <ScalarProperty Name="passenger_passport" ColumnName="passenger_passport" />
+          <ScalarProperty Name="passenger_dob" ColumnName="passenger_dob" />
+          <ScalarProperty Name="class_type" ColumnName="class_type" />
+          <ScalarProperty Name="ticket_status" ColumnName="ticket_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

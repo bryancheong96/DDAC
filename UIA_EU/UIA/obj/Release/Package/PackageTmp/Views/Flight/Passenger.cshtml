@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using UIA.Models
+@using (Html.BeginForm("PassengerDetail", "Flight", FormMethod.Post)) {
+<table class="table">
+    <tr>
+        <th>
+            Passenger no.
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Passport
+        </th>
+        <th>
+            Date of Birth
+        </th>
+    </tr>
+        @{int count = Convert.ToInt32(TempData["passenger"]);
+            int child_count = Convert.ToInt32(TempData["child"]);
+            for (int i = 1; i <= count; i++)
+            {
+                <tr>
+                    <td>
+                        <label>Passenger @i</label>
+                    </td>
+                    <td>
+                        <input name="last_name_@i" type="text" required/>
+                    </td>
+                    <td>
+                        <input name="first_name_@i" type="text" required />
+                    </td>
+                    <td>
+                        <input name="passport_@i" type="text" required />
+                    </td>
+                    <td>
+                        <input name="dob_@i" type="date" required />
+                    </td>
+                </tr>
+            }
+            for (int i = 1; i <= child_count; i++)
+            {
+                <tr>
+                    <td>
+                        <label>Child @i</label>
+                    </td>
+                    <td>
+                        <input name="child_last_name_@i" type="text" required />
+                    </td>
+                    <td>
+                        <input name="child_first_name_@i" type="text" required />
+                    </td>
+                    <td>
+                        <input name="child_passport_@i" type="text" required />
+                    </td>
+                    <td>
+                        <input name="child_dob_@i" type="date" required />
+                    </td>
+                </tr>
+            }
+        }
+</table>
+    var type = TempData["type"]; 
+    <input name="type" type="text" value="@type" hidden/>
+    <input name="child_count" value="@child_count" type="text" hidden />
+    <input id="count" name="count" value="@count" type="text" hidden />
+    <input type="submit" value="submit"/>
+}
+
