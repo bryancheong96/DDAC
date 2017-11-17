@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model UIA.Models.Member
+
+@using (Html.BeginForm("UpdateProfile", "Member", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    var member = ViewData["member_detail"] as UIADatabase.Member;
+    string date = member.DOB.ToString("yyyy-MM-dd");
+
+    <h2>Edit Profile</h2>
+    <fieldset>
+        <br />
+        <div id="editprofile"></div>
+
+        <img id="blah" src="@member.image_url" alt="Profile Picture" width="250" height="300"/>
+        <br />
+        <br />
+        <input type='file' name="photo" onchange="readURL(this);" />
+        <input type="text" name="url" hidden value="@member.image_url" />
+
+
+        <div class="editor-label">
+            <label>Name</label>
+        </div>
+        <div class="editor-field">
+            <input name="name" type="text" value="@member.name" />
+        </div>
+
+        <div class="editor-label">
+            <label>Date of Birth</label>
+        </div>
+        <div class="editor-field">
+            <input name="dob" type="date" value="@date" />
+        </div>
+
+        <div class="editor-label">
+            <label>Email</label>
+        </div>
+        <div class="editor-field">
+            <input name="email" type="email" value="@member.email" />
+        </div>
+
+        <div class="editor-label">
+            <label>Username</label>
+        </div>
+        <div class="editor-field">
+            <input name="username" type="text" value="@member.login_username" />
+        </div>
+
+        <div class="editor-label">
+            <label>Password</label>
+        </div>
+        <div class="editor-field">
+            <input name="password" type="password" value="@member.Login.password"  />
+        </div>
+        <p>
+            <input type="submit" value="Update" />
+        </p>
+    </fieldset>
+}
+
+<script language="javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(250)
+                    .height(300);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+ 

@@ -1,0 +1,10 @@
+D:\UIA_Asia\UIADatabase\bin\Debug\UIADatabase.dll.config
+D:\UIA_Asia\UIADatabase\bin\Debug\UIADatabase.dll
+D:\UIA_Asia\UIADatabase\bin\Debug\UIADatabase.pdb
+D:\UIA_Asia\UIADatabase\bin\Debug\EntityFramework.dll
+D:\UIA_Asia\UIADatabase\bin\Debug\EntityFramework.SqlServer.dll
+D:\UIA_Asia\UIADatabase\bin\Debug\EntityFramework.xml
+D:\UIA_Asia\UIADatabase\bin\Debug\EntityFramework.SqlServer.xml
+D:\UIA_Asia\UIADatabase\obj\Debug\UIADatabase.csprojResolveAssemblyReference.cache
+D:\UIA_Asia\UIADatabase\obj\Debug\UIADatabase.dll
+D:\UIA_Asia\UIADatabase\obj\Debug\UIADatabase.pdb

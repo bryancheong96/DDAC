@@ -1,0 +1,234 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<UIADatabase.Flight>
+@using UIADatabase
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<h2>Depart Flight</h2>
+<table class="table">
+    <tr>
+        <th>
+            Flight No.
+        </th>
+        <th>
+            Depart Time
+        </th>
+        <th>
+            Arrival Time
+        </th>
+        <th>
+            Fare
+        </th>
+        <th></th>
+    </tr>
+    @if (TempData["origin_date1"] != null)
+    {
+        DateTime origin_date1 = Convert.ToDateTime(TempData["origin_date1"]);
+        DateTime origin_date = Convert.ToDateTime(TempData["origin_date"]);
+        string type = TempData["type"].ToString();
+        int child = Convert.ToInt32(TempData["child"]);
+        UIAEntities database = new UIAEntities();
+        foreach (var item in Model)
+        {
+            var timing = from fr in database.FlightRecords
+                         where fr.flight_no == item.flight_no & (fr.departure_datetime >= origin_date1 & fr.departure_datetime <= origin_date)
+                         select fr;
+
+            foreach (var time in timing)
+            {
+                var fare1 = from f in database.FareTariffs
+                            where f.flight_id == time.flight_id & f.class_type == type
+                            select f;
+                var fare = fare1.FirstOrDefault();
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.flight_no)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => time.departure_datetime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => time.arrival_datetime)
+                    </td>
+                    @if (child != 0)
+                    {
+                    <td>
+                        <label>Adult : RM</label> @fare.adult_fare<br />
+                        <label>Child : RM</label> @fare.child_fare
+                    </td>}
+                    else
+                    {
+                        <td>
+                            <label>Adult : RM</label> @fare.adult_fare
+                        </td>
+                    }
+                    <td>
+                        <label>Select</label>
+                        <input class="checkselect1" name="round" id="@Html.DisplayName(time.flight_id.ToString())" type="checkbox" value="@Html.DisplayName(time.flight_id.ToString())" onclick="CheckSelect1()" />
+                    </td>
+                </tr>
+            }
+        }
+    }
+</table>
+
+@if (ViewData["arrival_date1"] != null)
+{
+    <h2>Return Flight</h2>
+    <table class="table" id="checkout">
+        <tr>
+            <th>
+                Flight No.
+            </th>
+            <th>
+                Depart Time
+            </th>
+            <th>
+                Arrival Time
+            </th>
+            <th>
+                Fare
+            </th>
+            <th></th>
+        </tr>
+        @if (ViewData["arrival_date"] != null)
+        {
+            DateTime arrival_date1 = Convert.ToDateTime(ViewData["arrival_date1"]);
+            DateTime arrival_date = Convert.ToDateTime(ViewData["arrival_date"]);
+            var flight = (List<Flight>)ViewData["arrival_query"];
+            int child = Convert.ToInt32(TempData["child"]);
+            string type = TempData["type"].ToString();
+            UIAEntities database = new UIAEntities();
+            foreach (var item in flight)
+            {
+                var timing = from fr in database.FlightRecords
+                             where fr.flight_no == item.flight_no & (fr.departure_datetime >= arrival_date1 & fr.departure_datetime <= arrival_date)
+                             select fr;
+                foreach (var time in timing)
+                {
+                    var fare1 = from f in database.FareTariffs
+                                where f.flight_id == time.flight_id & f.class_type == type
+                                select f;
+                    var fare = fare1.FirstOrDefault();
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.flight_no)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => time.departure_datetime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => time.arrival_datetime)
+                        </td>
+                        @if (child != 0)
+                        {
+                            <td>
+                                <label>Adult : RM</label>@fare.adult_fare<br />
+                                <label>Child : RM</label> @fare.child_fare
+                            </td>}
+                        else
+                        {
+                            <td>
+                                <label>Adult : RM</label>@fare.adult_fare
+                            </td>
+                        }
+                        <td>
+                            <label>Select</label>
+                            <input class="checkselect2" name="round" id="@Html.DisplayName(time.flight_id.ToString())" type="checkbox" value="@Html.DisplayName(time.flight_id.ToString())" onclick="CheckSelect2()" />
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+}
+
+
+@using (Html.BeginForm("SelectedFlight", "Flight", FormMethod.Post, new { onsubmit = "return runSearch(this)" }))
+{
+    string type = TempData["type"].ToString();
+    int child = Convert.ToInt32(TempData["child"]);
+    <input name="child" type="text" value="@child" hidden/>
+    <input name="type" type="text" value="@type" hidden/>
+    <input id="flight1" name="flight1" type="text"  value="" hidden/>
+    <input id="flight2" name="flight2" type="text" value="0"  hidden/>
+    <input type="submit" value="Next" />
+}
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+    </script>
+}
+
+
+<script language="javascript">
+    var storage1,storage2 = null;
+
+    function runSearch() {
+        var count1=0, count2 = 0;
+        var inputElements = document.getElementsByClassName('checkselect1');
+        var inputElements2 = document.getElementsByClassName('checkselect2');
+        for (var i = 0; inputElements[i]; ++i) {
+            if (!(inputElements[i].checked)) {
+                count1++;
+            }
+        }
+        if (inputElements2.length > 0) {
+            for (var i = 0; inputElements2[i]; ++i) {
+                if (!(inputElements2[i].checked)) {
+                    count2++;
+                }
+            }
+            if (count1 == inputElements.length) {
+                alert('Please select departure flight.');
+                return false;
+            } else if (count2 == inputElements2.length) {
+                alert('Please select return flight.');
+                return false;
+            }
+        } else {
+            if (count1 == inputElements.length) {
+                alert('Please select departure flight.');
+                return false;
+            }
+        }
+    }
+
+    function CheckSelect1() {
+        var inputElements = document.getElementsByClassName('checkselect1');
+        for (var i = 0; inputElements[i]; ++i) {
+            if (inputElements[i].checked) {
+                if (storage1 != null) {
+                    document.getElementById(storage1).checked = false;
+                    storage1 = inputElements[i].id;
+                    document.getElementById('flight1').value = inputElements[i].value;
+                }else{
+                    storage1 = inputElements[i].id;
+                    document.getElementById('flight1').value = inputElements[i].value;
+                }
+            }
+        }
+    }
+
+    function CheckSelect2() {
+        var inputElements = document.getElementsByClassName('checkselect2');
+        for (var i = 0; inputElements[i]; ++i) {
+            if (inputElements[i].checked) {
+                if (storage2 != null) {
+                    document.getElementById(storage2).checked = false;
+                    storage2 = inputElements[i].id;
+                    document.getElementById('flight2').value = inputElements[i].value;
+                } else {
+                    storage2 = inputElements[i].id;
+                    document.getElementById('flight2').value = inputElements[i].value;
+                }
+            }
+        }
+    }
+</script>
+

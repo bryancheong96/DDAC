@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f0001d0d8694ad79d3ea878560095b5" Name="Diagram1">
+        <EntityTypeShape EntityType="UIAModel.Airport" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.Booking" Width="1.5" PointX="6.625" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.FareTariff" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.FlightRecord" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.Flight" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.Login" Width="1.5" PointX="1.125" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.Member" Width="1.5" PointX="3.375" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.Route" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UIAModel.Ticket" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="UIAModel.FK__Routes__dest_air__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__Routes__origin_a__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__Bookings__accoun__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__Tickets__booking__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__FareTarif__fligh__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__FlightRec__fligh__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__Tickets__flight___60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__Flights__route_i__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="UIAModel.FK__Member__login_us__5CD6CB2B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
